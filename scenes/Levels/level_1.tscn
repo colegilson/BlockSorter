@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://boab3u7hx7hjm"]
+
+[ext_resource type="Texture2D" uid="uid://70yvmbp53dep" path="res://Sprites/BlockGameTilemap.png" id="1_u4vco"]
+[ext_resource type="Script" path="res://scenes/Levels/Game_Board.gd" id="2_i2i8x"]
+[ext_resource type="PackedScene" uid="uid://632vy4idqbok" path="res://scenes/Levels/HUD.tscn" id="3_exn11"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1s1r0"]
+texture = ExtResource("1_u4vco")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k5cx8"]
+sources/0 = SubResource("TileSetAtlasSource_1s1r0")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xxyua"]
+texture = ExtResource("1_u4vco")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mgyrb"]
+sources/1 = SubResource("TileSetAtlasSource_xxyua")
+
+[node name="Level 1" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -54.0
+offset_right = 269.0
+offset_bottom = 282.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.573
+anchor_bottom = 1.965
+offset_right = -0.0790405
+offset_bottom = -0.130066
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8, 8)
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="board" type="Node" parent="Control/HBoxContainer/VBoxContainer"]
+
+[node name="Control" type="Control" parent="Control/HBoxContainer/VBoxContainer/board"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = 113.0
+offset_right = -44.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game Board" type="TileMap" parent="Control/HBoxContainer/VBoxContainer/board/Control"]
+scale = Vector2(3.5, 3.5)
+tile_set = SubResource("TileSet_k5cx8")
+format = 2
+layer_0/name = "border"
+layer_0/tile_data = PackedInt32Array(-1, 458752, 0, -65525, 458752, 0, 11, 458752, 0, 65547, 458752, 0, 131083, 458752, 0, 196619, 458752, 0, 262155, 458752, 0, 327691, 458752, 0, 327690, 458752, 0, 327689, 458752, 0, 327688, 458752, 0, 327687, 458752, 0, 327686, 458752, 0, 327685, 458752, 0, 327684, 458752, 0, 327683, 458752, 0, 327682, 458752, 0, 327681, 458752, 0, 327680, 458752, 0, 393215, 458752, 0, 327679, 458752, 0, 262143, 458752, 0, 196607, 458752, 0, 131071, 458752, 0, 65535, 458752, 0, -327676, 458752, 0, -327675, 458752, 0, -327674, 458752, 0, -327673, 458752, 0, -327672, 458752, 0, -327671, 458752, 0, -65537, 458752, 0, -131073, 458752, 0, -196609, 458752, 0, -262145, 458752, 0, -327680, 458752, 0, -327679, 458752, 0, -327678, 458752, 0, -327677, 458752, 0, -327670, 458752, 0, -327669, 458752, 0, -262133, 458752, 0, -196597, 458752, 0, -131061, 458752, 0)
+layer_1/name = "active"
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "start space"
+layer_2/z_index = -2
+layer_2/tile_data = PackedInt32Array(-65531, 65536, 2, -65530, 65536, 2, -65529, 65536, 2, -65528, 65536, 2, -131064, 65536, 2, -131065, 65536, 2, -131066, 65536, 2, -131067, 65536, 2, -196600, 65536, 2, -196601, 65536, 2, -196602, 65536, 2, -196603, 65536, 2, -262144, 65536, 2, -196608, 65536, 2, -131072, 65536, 2, -65536, 65536, 2, -262143, 65536, 2, -196607, 65536, 2, -131071, 65536, 2, -65535, 65536, 2, -262142, 65536, 2, -196606, 65536, 2, -131070, 65536, 2, -65534, 65536, 2, -262141, 65536, 2, -196605, 65536, 2, -131069, 65536, 2, -65533, 65536, 2, -262140, 65536, 2, -196604, 65536, 2, -131068, 65536, 2, -65532, 65536, 2, -65526, 65536, 2, -131062, 65536, 2, -196598, 65536, 2, -262135, 65536, 2, -196599, 65536, 2, -131063, 65536, 2, -65527, 65536, 2, -262136, 65536, 2, -262137, 65536, 2, -262138, 65536, 2, -262139, 65536, 2, -262134, 65536, 2)
+script = ExtResource("2_i2i8x")
+
+[node name="HUD" parent="Control/HBoxContainer/VBoxContainer/board/Control/Game Board" instance=ExtResource("3_exn11")]
+
+[node name="TileMap" type="TileMap" parent="Control/HBoxContainer/VBoxContainer/board"]
+position = Vector2(-44, 114)
+scale = Vector2(3.5, 3.5)
+tile_set = SubResource("TileSet_mgyrb")
+format = 2
+layer_0/name = "game area"
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(0, 1, 1, 1, 65537, 1, 2, 65537, 1, 3, 65537, 1, 4, 65537, 1, 5, 65537, 1, 6, 65537, 1, 7, 65537, 1, 8, 65537, 1, 9, 65537, 1, 10, 131073, 1, 65536, 196609, 1, 131072, 196609, 1, 196608, 196609, 1, 65537, 262145, 1, 131073, 262145, 1, 196609, 262145, 1, 65538, 262145, 1, 131074, 262145, 1, 196610, 262145, 1, 65539, 262145, 1, 131075, 262145, 1, 196611, 262145, 1, 65540, 262145, 1, 131076, 262145, 1, 196612, 262145, 1, 65541, 262145, 1, 131077, 262145, 1, 196613, 262145, 1, 65542, 262145, 1, 131078, 262145, 1, 196614, 262145, 1, 65543, 262145, 1, 131079, 262145, 1, 196615, 262145, 1, 65544, 262145, 1, 131080, 262145, 1, 196616, 262145, 1, 65545, 262145, 1, 131081, 262145, 1, 196617, 262145, 1, 65546, 327681, 1, 131082, 327681, 1, 196618, 327681, 1, 262144, 393217, 1, 262145, 458753, 1, 262146, 458753, 1, 262147, 458753, 1, 262148, 458753, 1, 262149, 458753, 1, 262150, 458753, 1, 262151, 458753, 1, 262152, 458753, 1, 262153, 458753, 1, 262154, 1, 2)
+
+[node name="Camera2D" type="Camera2D" parent="Control/HBoxContainer/VBoxContainer"]
+position = Vector2(78.625, 1.125)
+offset = Vector2(-140, 125)

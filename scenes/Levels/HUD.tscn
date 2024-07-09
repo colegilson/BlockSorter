@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://632vy4idqbok"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wtw7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0.784314)
+
+[sub_resource type="SystemFont" id="SystemFont_j0w0r"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_uxknb"]
+font_names = PackedStringArray("Impact")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 870.0
+offset_top = 120.0
+offset_right = 1115.0
+offset_bottom = 270.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1wtw7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Next Piece" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 70.0
+offset_right = 1080.0
+offset_bottom = 115.0
+theme_override_fonts/font = SubResource("SystemFont_j0w0r")
+theme_override_font_sizes/font_size = 30
+text = "NEXT PIECE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 270.0
+offset_right = 1080.0
+offset_bottom = 315.0
+theme_override_fonts/font = SubResource("SystemFont_j0w0r")
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_fonts/font = SubResource("SystemFont_j0w0r")
+theme_override_font_sizes/font_size = 60
+text = "Game Over
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="New Game" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 250.0
+offset_right = 500.0
+offset_bottom = 350.0
+theme_override_fonts/font = SubResource("SystemFont_uxknb")
+theme_override_font_sizes/font_size = 45
+text = "New Game"
